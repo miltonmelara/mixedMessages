@@ -51,3 +51,31 @@ const complimentsForCreating = () => {
     const compliments = [' cool stuff.', ' big projects.', ' a better world for next generations.'];
     return compliments[Math.floor(Math.random()* 3)];
 };
+
+
+//Message generator func
+
+const createMessage = () => {
+    let secondWord = rand2ndWord();
+    let thirdWordForAre = rand3rdWordForAre();
+    let thirdWordForNotAre = rand3rdWordNotAre();
+    if (secondWord === ' are'){
+        if (thirdWordForAre === ' doing'){
+            return 'You' + secondWord + thirdWordForAre + complimentsForDoing();
+        } else if (thirdWordForAre === ' making'){
+            return 'You' + secondWord + thirdWordForAre + complimentsForMaking();
+        } else if (thirdWordForAre === ' creating'){
+            return 'You' + secondWord + thirdWordForAre + complimentsForCreating();
+        };
+    };
+    if (secondWord === ' are going to' || secondWord === ' will'){
+        if (thirdWordForNotAre === ' be'){
+            return 'You' + secondWord + thirdWordForNotAre + complimentsForBe();
+        } else if (thirdWordForNotAre === ' make'){
+            return 'You' + secondWord + thirdWordForNotAre + complimentsForMake();
+        } else if (thirdWordForNotAre === ' create'){
+            return 'You' + secondWord + thirdWordForNotAre + complimentsForCreate();
+        };
+    };
+};
+console.log(createMessage())
