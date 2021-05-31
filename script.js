@@ -7,7 +7,7 @@ const rand3rdWordNotAre = () => {
     return words[Math.floor(Math.random()* 3)];
 };
 const rand3rdWordForAre = () => {
-    const words = ['being', 'making', 'creating'];
+    const words = ['doing', 'making', 'creating'];
     return words[Math.floor(Math.random()* 3)];
 };
 const complimentsForBe = () => {
@@ -20,5 +20,9 @@ const complimentsForMake = () => {
 }; //Add compliments for create, and for all the compliments for be
 const complimentsForCreate = () => {
     const compliments = ['new stuff.', 'big things.', 'a new life.'];
+    return compliments[Math.floor(Math.random()* 3)];
+};
+const complimentsForDoing = () => {
+    const compliments = ['great.', 'amazing things.', 'your best.'];
     return compliments[Math.floor(Math.random()* 3)];
 }
