@@ -17,4 +17,8 @@ const complimentsForBe = () => {
 const complimentsForMake = () => {
     const compliments = ['big things.', 'the world a better place.', 'great changes.'];
     return compliments[Math.floor(Math.random()* 3)];
-};
+}; //Add compliments for create, and for all the compliments for be
+const complimentsForCreate = () => {
+    const compliments = ['new stuff.', 'big things.', 'a new life.'];
+    return compliments[Math.floor(Math.random()* 3)];
+}
